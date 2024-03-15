@@ -15,9 +15,12 @@ After that, data/*.csv will contain lists in csv.
 import csv
 import dataclasses
 from typing import Iterator, Callable
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from bs4.element import Tag
+from database.cefr_service import CerfService
 
+from database.entity import Word
 BASE_URL = "https://www.oxfordlearnersdictionaries.com"
 
 
@@ -28,7 +31,6 @@ class Entry:
     pos: str
     definition_url: str
     voice_url: str = None
-
 
 def load_source(filename: str) -> BeautifulSoup:
     text = ""
@@ -41,9 +43,9 @@ def reader(soup: BeautifulSoup, parse_fn: Callable[[BeautifulSoup], Entry]) -> I
     for item in soup.body:
         if not isinstance(item, Tag):
             continue
-        # if item.get("class") == ["hidden"]:
-        #     continue
         entry = parse_fn(item)
+        if entry is None:
+            continue
         yield entry
 
 
@@ -56,12 +58,15 @@ def writer(filename):
             row = yield
             writer.writerow(row)
 
-
-def to_csv(in_filename: str, out_filename: str, parse_fn: Callable[[BeautifulSoup], Entry]):
+def to_csv(in_filename: str, parse_fn: Callable[[BeautifulSoup], Entry]):
     soup = load_source(in_filename)
-    w = writer(out_filename)
-    next(w)
+    count = 0
     for entry in reader(soup, parse_fn):
-        print(entry.word)
-        w.send([entry.word, entry.level, entry.pos, entry.definition_url, entry.voice_url])
-    w.close()
+        count += 1
+        try:
+            Word.get(Word.definition_url == entry.definition_url)
+        except Word.DoesNotExist:
+            print({'WORD': entry.word, 'TYPE_ID': 2,'LEVEL_ID': CerfService.get_id_by_string(entry.level), 'POS': entry.pos, 'DEFINITION_URL': entry.definition_url, 'VOICE_URL': entry.voice_url, 'DEFINITION_ID': None})
+        # Word.get_or_create(definition_url=entry.definition_url, defaults={'WORD': entry.word, 'TYPE_ID': 2,'LEVEL_ID': CerfService.get_id_by_string(entry.level), 'POS': entry.pos, 'DEFINITION_URL': entry.definition_url, 'VOICE_URL': entry.voice_url, 'DEFINITION_ID': None})
+    # print(count)
+    

@@ -24,4 +24,4 @@ def parse(item: BeautifulSoup) -> oxford.Entry:
 
 
 if __name__ == "__main__":
-    oxford.to_csv(sys.argv[1], sys.argv[2], parse)
+    oxford.to_csv(sys.argv[1], parse)

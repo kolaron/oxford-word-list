@@ -1,0 +1,53 @@
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\dozen.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\each.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\each.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\either_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\all-right_2.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\alone.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\few_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\first_1.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file2213.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/found
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\full-time_2.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\goodbye.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\half_2.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\another.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\hello_1.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file2503.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/here_1
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file2976.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/lay_1
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\least_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\less_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\little_2.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\many.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file3264.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/media
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\impossible.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\many.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\many.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\many.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\neither_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\nor.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\ok_2.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\one_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\other_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\out_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\own_1.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file3745.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/panel_1
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\per-cent_1.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file4389.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/rent_2
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\second1_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\several_1.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file4999.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/square_2
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\such.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\than.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\this_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\throughout.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\till_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\until.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file5630.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/upon
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\what.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\whatever_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\which_1.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\whose.htm
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\worldwide.htm
+CHYBA find_word: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file5937.html
+CHYBA: soubor jiz existuje: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\both.htm
+CHYBA sence: None, filePath: C:\Users\Kolar\IdeaProjects\oxford-word-list\html_downloader\html_files\file848.html, url: https://www.oxfordlearnersdictionaries.com/definition/english/chip_1
