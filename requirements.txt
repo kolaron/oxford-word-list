@@ -1,0 +1,7 @@
+peewee
+BeautifulSoup4
+lxml
+html5lib
+requests
+pandas
+openpyxl
