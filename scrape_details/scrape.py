@@ -1,30 +1,9 @@
 import os
-from urllib.parse import urlparse
-from bs4 import BeautifulSoup
+from typing import Callable
+from bs4 import BeautifulSoup, ResultSet, Tag
 from database.entity import Definition, SentenceDefinition, Word, get_database
 
-HTML_FOLDER = 'C:\\Users\\Kolar\\IdeaProjects\\oxford-word-list\\html_downloader\\html_files'
-# HTML_FOLDER = 'C:\\Users\\Kolar\\IdeaProjects\\oxford-word-list\\html_downloader\\error_files'
-# HTML_FOLDER = 'C:\\Users\\Kolar\\IdeaProjects\\oxford-word-list\\html_downloader\\test'
-
-def get_word_from_url(url):
-    parsed_url = urlparse(url)
-    path = parsed_url.path
-    parts = path.split('/')
-    return parts[-1]
-
-def find_definitions(soup):
-    senses_multiple = soup.find('ol', class_='senses_multiple')
-    return senses_multiple.find_all('li', class_='sense') if senses_multiple else []
-
-def find_definition(sense):
-    return sense.find('span', {'class': 'def'})
-
-def find_examples(sense):
-    examples_div = sense.find('ul', class_='examples')
-    if examples_div is None:
-        return []
-    return [ex.text.strip() for ex in examples_div.find_all('span', class_='x')]
+HTML_FOLDER = '/home/kolar/Projects/oxford-word-list/html_downloader/html_files'
 
 def get_image(sense):
     android_app_tags = sense.find_all('a', {'class': 'android-app'})
@@ -48,10 +27,11 @@ def rename_file(url, oldpath, subdir):
         os.rename(oldpath, new_file)
     except FileExistsError:
         print(f'CHYBA: soubor jiz existuje: {new_file}')
+
 '''
 Scrape local html files. And get the word, definition, and example sentences.
 '''
-def scrape_oxford():
+def scrape_oxford(parse_fn: Callable[[Word,BeautifulSoup, str, str], None]):
     for subdir, dirs, files in os.walk(HTML_FOLDER):
         for file in files:
             # Get the full file path by joining the directory path and file name
@@ -71,32 +51,8 @@ def scrape_oxford():
             except Word.DoesNotExist:
                 # print(f'CHYBA DB nenalezeno word: {word}, filePath: {filepath}, url: {url}')
                 continue
-            senses = find_definitions(soup)
-            # For each sense, find the definition and example sentences
             with get_database().atomic():
-                for sense in senses:
-                    img_url = get_image(sense)
-                    sence = find_definition(sense)
-                    if sence is None:
-                        print(f'CHYBA sence: {sence}, filePath: {filepath}, url: {url}')
-                        continue
-                    def_text = sence.text
-                    definition_entity, created = Definition.get_or_create(definition=def_text, defaults={'definition': def_text, 'word_id': wordEntity.id})
-                    if definition_entity is None:
-                        continue
-                    if img_url is None or img_url == definition_entity.img_url:
-                        continue
-                    definition_entity.img_url = img_url
-                    definition_entity.save()
-                    # print(f'Definition: {definition}')
-                    # examples = find_examples(sense)
-                    # list = []
-                    # for example in examples:
-                    #     example_entity, exampleCreated = SentenceDefinition.get_or_create(sentence=example, defaults={'sentence': example, 'definition_id': definition_entity.id})
-                    #     list.append({'example': example})
-                    # print(f'Examples: {list}')
-            rename_file(url, filepath, subdir)
-            # return
+                parse_fn(wordEntity, soup, filepath, url[0])
 
-if __name__ == "__main__":
-    scrape_oxford()
+# if __name__ == "__main__":
+#     scrape_oxford()
