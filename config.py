@@ -10,7 +10,6 @@ def get_config():
     config = None
 
     if exists:
-        print("--------config.ini file found at", config_filepath)
         config = ConfigParser()
         config.read(config_filepath)
         return config
@@ -30,3 +29,11 @@ def get_html_config(key):
         return None
     html_config = config["HTML"]
     return html_config[key]
+
+
+def get_database_url():
+    return get_database_config("url")
+
+
+def get_html_files_path():
+    return get_html_config("path")

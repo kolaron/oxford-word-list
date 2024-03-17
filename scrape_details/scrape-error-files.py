@@ -32,11 +32,9 @@ def scrape(wordEntity, soup, filepath):
                 f"CHYBA sence: {definition}, filePath: {filepath}, url: {wordEntity.definition_url}"
             )
             continue
-        def_text = definition.text
         definition_entity, created = Definition.get_or_create(
             word_id=wordEntity.id,
-            definition=def_text,
-            defaults={"definition": def_text, "word_id": wordEntity.id},
+            defaults={"definition": definition.text, "word_id": wordEntity.id},
         )
         if definition_entity is None:
             continue
@@ -45,7 +43,6 @@ def scrape(wordEntity, soup, filepath):
         for example in examples:
             example_entity, exampleCreated = SentenceDefinition.get_or_create(
                 definition_id=definition_entity.id,
-                sentence=example,
                 defaults={"sentence": example, "definition_id": definition_entity.id},
             )
             list.append(example)

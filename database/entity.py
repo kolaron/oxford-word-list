@@ -1,7 +1,9 @@
 from urllib.parse import urlparse
 from peewee import *
 
-db = SqliteDatabase('/home/kolar/Projects/oxford-word-list/database/my_database.db')
+from config import get_database_url
+
+db = SqliteDatabase(get_database_url())
 
 @staticmethod
 def get_database():
