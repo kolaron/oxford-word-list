@@ -31,19 +31,35 @@ class Word(BaseModel):
     id = PrimaryKeyField()
     word = CharField()
     type_id = ForeignKeyField(Type, backref='words')
-    level_id = ForeignKeyField(CefrLevel, backref='words')
-    pos = CharField()
+    level_id = ForeignKeyField(CefrLevel, backref="words")
     definition_url = CharField()
     voice_url = CharField()
 
     class Meta:
         table_name = 'word'
-    
+
     def get_word_from_url(self):
         parsed_url = urlparse(self.definition_url)
         path = parsed_url.path
         parts = path.split('/')
         return parts[-1]
+
+
+class WordType(BaseModel):
+    id = PrimaryKeyField()
+    type = CharField()
+
+    class Meta:
+        table_name = "WORD_TYPE"
+
+
+class WordToWordType(BaseModel):
+    word = ForeignKeyField(Word, backref="word_to_word_types")
+    wordType = ForeignKeyField(WordType)
+
+    class Meta:
+        table_name = "WORD_TO_WORD_TYPE"
+
 
 class Definition(BaseModel):
     id = PrimaryKeyField()
@@ -57,6 +73,7 @@ class Definition(BaseModel):
 class SentenceDefinition(BaseModel):
     id = PrimaryKeyField()
     sentence = TextField()
+    sentence_translation = TextField()
     definition_id = ForeignKeyField(Definition, backref='sentence_definitions')
 
     class Meta:
